@@ -1,0 +1,323 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Hash.Supply',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:circle-arrow-right',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      At the Intersection of <span class="text-accent dark:text-white highlight">Web2</span> and <span class="text-accent dark:text-white highlight">Web3.</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Discover battle-tested, production-ready, secure infrastructure tailored for Web3 scalability and security. 
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-accent">hash.supply: Production-ready.</span>
+      Suitable for Startups, Small Business, Enterpise, Professionals.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with hash.supply"
+    subtitle="One of the most professional and comprehensive infastructure solutions currently on the market."
+    items={[
+      {
+        title: 'Managed Infrastructure Solutions ',
+        description:
+          'Outsource your infrastructure management with confidence. We handle operations, maintenance, and modernization, so you can focus on growing your business.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Tailored Infrastructure for Growth',
+        description:
+          'We build infrastructure that grows with you, ensuring your systems are secure, scalable, and ready to handle the demands of today and tomorrow.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Best Practices',
+        description:
+          'Creating secure, efficient, and user-friendly infrastructure that delivers exceptional experiences and lasting value.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Comprehensive Support',
+        description:
+          'From implementation to ongoing management, we offer full support to keep your infrastructure secure, resilient, and efficient.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Modernize and Optimize',
+        description:
+          "We deliver automation, security, and scalability solutions to modernize your infrastructure, ensuring peak performance and future readiness.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Open to new ideas and contributions',
+        description:
+          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="What's Inside"
+    title="Scale and Functionality!"
+    items={[
+      {
+        title: 'Built on top of the cloud',
+        description:
+          'Benefit from the performance and developer-friendly features of modern cloud infrastructure',
+      },
+      {
+        title: 'Modern and Future-Proof',
+        description:
+          'Facilitating rapid design and consistent reliability at any scale',
+      },
+      {
+        title: 'Decades of Expertise',
+        description:
+          'Ensure your success with our experience in finance, government, big tech, startups, and blockchain',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
+      Gain a competitive advantage by incorporating industry leading practices
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'High level of customization',
+        description: `Tailored effortlessly to match your brand's identity and requirements, making your applications powerful and saving you time`,
+      },
+      {
+        title: 'Multiple possibilities',
+        description:
+          'Explore various options to find the solutions that best fits your requirements, users and business model',
+      },
+      {
+        title: 'Fully managed',
+        description:
+          "Ensure your applications infrastructure's optimal performance providing a consistent and enjoyable user experience",
+      },
+      {
+        title: 'Integration of media',
+        description:
+          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Enhanced user engagement',
+        description:
+          'Captivate your audience with with blazingly modules and components',
+      },
+      {
+        title: 'Continuous improvement',
+        description:
+          'Ensure your applications stays aligned with the latest trends and technologies through regular updates and enhancements',
+      },
+      {
+        title: 'Time and resource efficiency',
+        description:
+          'Skip the time-consuming process of building infrastructure from scratch and launch your online presence sooner with hash.supply',
+      },
+      {
+        title: 'Community support',
+        description: `Join the growing hash.supply community for insights, resources, and assistance, ensuring you're never alone on your web development journey`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Get your dream up and running in no time with hash.supply"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Contact Us</span>',
+        description:
+          "Kickstart with hash.supply! Contac us and get started. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Select solutions</span>',
+        description:
+          "Pour your vision into it. Pick what you need and we'll build it.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Customize</span>',
+        description:
+          'Give it your personal touch. Your unique flair, amplified by hash.supply! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={``}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What do our Infrastructure Solutions Include?',
+        description:
+          "At hash.supply, we design and architect tailored infrastructure solutions built to meet your unique needs. Our expertise spans both Web2 and Web3, ensuring that every system we build is scalable, secure, and optimized for performance. We work closely with you to understand your operational goals, developing infrastructure that seamlessly integrates with your existing systems while preparing for future growth.",
+      },
+      {
+        title: 'How does hash.supply ensure Security and Compliance?',
+        description:
+          'With decades of combined experience in highly regulated industries like finance and government, we bring this expertise to securing Web3 infrastructure, ensuring the highest standards of protection and reliability.',
+      },
+      {
+        title: 'How do Automation and Infrastructure as Code (IaC) Drive Efficiency and Growth?',
+        description:
+          "Automation and Infrastructure as Code (IaC) enable consistent, repeatable infrastructure management, minimizing manual intervention and reducing errors. By defining infrastructure in code, we ensure that environments can be deployed and scaled effortlessly across any cloud or on-premise setup. This accelerates development cycles, provides greater control over complex systems, and ensures that infrastructure grows in step with your needs. Our approach creates a foundation where rapid iteration and continuous improvement are part of your system’s DNA, making scaling a natural and efficient process.",
+      },
+      {
+        title: "What do our Infrastructure Audits Cover?",
+        description:
+          "Our infrastructure audits focus on identifying issues and ensuring systems are built to maintain security, reliability, and scalability. We assess architecture design, network configurations, access control, and resource optimization to ensure they align with best practices and operational goals. Additionally, we evaluate backup strategies, disaster recovery plans, and performance bottlenecks to ensure your infrastructure remains robust under pressure. Our goal is to help you achieve an infrastructure that is not only secure but also resilient, efficient, and future-proof.",
+      },
+      {
+        title: 'How does hash.supply manage API Architecture and Cloud Infrastructure?',
+        description:
+          "At hash.supply, our team brings decades of experience across finance, government, and blockchain, having been involved in crypto since the industry’s inception. We design and implement scalable, secure systems tailored to your API and application needs. Our approach ensures that your infrastructure can adapt to growth, with a focus on reliability, high availability, and long-term maintainability. ",
+      }
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Clients', amount: '132K' },
+      { title: 'Value Delivered', amount: '$100M+' },
+      { title: 'Time Saved', amount: '+inf' },
+      { title: 'Reviews', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:brand-telegram',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      hash.supply
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Don't waste more time! :P
+    </Fragment>
+  </CallToAction>
+</Layout>
